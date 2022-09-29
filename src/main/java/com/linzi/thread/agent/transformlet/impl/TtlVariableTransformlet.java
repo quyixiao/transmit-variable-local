@@ -55,9 +55,11 @@ public class TtlVariableTransformlet implements JavassistTransformlet {
             if(!file.exists()){
                 file.mkdirs();
             }
+/*
 
-          /*  byte [] result = ctClass.toBytecode();
+           byte [] result = ctClass.toBytecode();
             IO.write(result, new File("/Users/quyixiao/github/Thread_NO_Known/origin/"+temp+".class"));
+
 */
 
             for (CtMethod method : ctClass.getDeclaredMethods()) {
