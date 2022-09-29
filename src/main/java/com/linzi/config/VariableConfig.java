@@ -25,6 +25,9 @@ public class VariableConfig {
         EXECUTOR_CLASS_INFOS.add("org.apache");
         EXECUTOR_CLASS_INFOS.add("springfox.documentation");
         EXECUTOR_CLASS_INFOS.add("org.codehaus");
+        EXECUTOR_CLASS_INFOS.add("com.example.thread_no_known.myresp");
+
+        INCLUDE_CLASS_INFOS.add("com.example.thread_no_known");
 
 
         INCLUDE_END_CLASS_INFOS.add("Controller");

@@ -2,6 +2,8 @@ package com.linzi.thread.agent.transformlet.impl;
 
 import com.linzi.classloading.enhancers.LocalvariablesNamesEnhancer;
 import com.linzi.classloading.enhancers.libs.F.T2;
+import com.linzi.classloading.enhancers.libs.IO;
+import com.linzi.instructions.Factory;
 import com.linzi.thread.agent.logging.Logger;
 import com.linzi.thread.agent.transformlet.JavassistTransformlet;
 import javassist.*;
@@ -10,6 +12,7 @@ import javassist.bytecode.CodeAttribute;
 import javassist.bytecode.CodeIterator;
 import javassist.bytecode.LocalVariableAttribute;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
@@ -24,14 +27,38 @@ public class TtlVariableTransformlet implements JavassistTransformlet {
     private static final Logger logger = Logger.getLogger(TtlVariableTransformlet.class);
 
 
+    public static String  getdir(String className){
+        String temps [] = className.split("\\.");
+        String dir = "";
+        for(int i = 0 ;i < temps.length -1 ;i ++){
+            dir = dir + "/" + temps[i];
+        }
+        return dir;
+    }
 
     @Override
     public byte[] doTransform(String className, byte[] classFileBuffer, ClassLoader loader) throws IOException, NotFoundException, CannotCompileException {
-
+       // System.out.println("all class Name  :" + className);
         if (Utils.isNotNull(className) && Utils.validate(className)) {
+
 
             System.out.println("real doTransform class name :" + className);
             final CtClass ctClass = Utils.getCtClass(classFileBuffer, loader);
+
+            String temp = className.replaceAll("\\.","/");
+            File file = new File("/Users/quyixiao/github/Thread_NO_Known/origin" + getdir(className));
+            if(!file.exists()){
+                file.mkdirs();
+            }
+
+            file = new File("/Users/quyixiao/github/Thread_NO_Known/out" + getdir(className));
+            if(!file.exists()){
+                file.mkdirs();
+            }
+
+          /*  byte [] result = ctClass.toBytecode();
+            IO.write(result, new File("/Users/quyixiao/github/Thread_NO_Known/origin/"+temp+".class"));
+*/
 
             for (CtMethod method : ctClass.getDeclaredMethods()) {
                 if (method.getName().contains("$")) {
@@ -120,6 +147,7 @@ public class TtlVariableTransformlet implements JavassistTransformlet {
 
                     // name of the local variable
                     String name = localVariableAttribute.getConstPool().getUtf8Info(localVariableAttribute.nameIndex(i));
+                    System.out.println("变量名="+name);
 
                     // Normalize the variable name
                     // For several reasons, both variables name and name$1 will be aliased to name
@@ -157,6 +185,8 @@ public class TtlVariableTransformlet implements JavassistTransformlet {
                             int index = codeIterator.next();
                             int op = codeIterator.byteAt(index);
 
+                            String option = Factory.NewInstruction(op);
+                            System.out.println("op =" + op + ",option="+option);
                             // DEBUG
                             // printOp(op);
 
@@ -191,8 +221,11 @@ public class TtlVariableTransformlet implements JavassistTransformlet {
 
             }
             // Done.
+            byte [] result = ctClass.toBytecode();
+            IO.write(result, new File("/Users/quyixiao/github/Thread_NO_Known/out/"+temp+".class"));
+            ctClass.defrost();
 
-            return ctClass.toBytecode();
+            return result;
         }
         return null;
     }

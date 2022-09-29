@@ -1,0 +1,122 @@
+/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/bin/javap -verbose com.example.thread_no_known.contoller.TestController
+Classfile /Users/quyixiao/github/Thread_NO_Known/target/classes/com/example/thread_no_known/contoller/TestController.class
+  Last modified 2022-9-27; size 1104 bytes
+  MD5 checksum 90193af27ac90e03857ec4909184097b
+  Compiled from "TestController.java"
+public class com.example.thread_no_known.contoller.TestController extends com.example.thread_no_known.contoller.BaseController
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #6.#31         // com/example/thread_no_known/contoller/BaseController."<init>":()V
+   #2 = Methodref          #32.#33        // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+   #3 = Class              #34            // java/lang/Object
+   #4 = Methodref          #5.#35         // com/example/thread_no_known/contoller/TestController.responseSuccess:([Ljava/lang/Object;)Lcom/example/thread_no_known/resp/ResponseResult;
+   #5 = Class              #36            // com/example/thread_no_known/contoller/TestController
+   #6 = Class              #37            // com/example/thread_no_known/contoller/BaseController
+   #7 = Utf8               <init>
+   #8 = Utf8               ()V
+   #9 = Utf8               Code
+  #10 = Utf8               LineNumberTable
+  #11 = Utf8               LocalVariableTable
+  #12 = Utf8               this
+  #13 = Utf8               Lcom/example/thread_no_known/contoller/TestController;
+  #14 = Utf8               test
+  #15 = Utf8               (Ljava/lang/String;)Lcom/example/thread_no_known/resp/ResponseResult;
+  #16 = Utf8               methodParam
+  #17 = Utf8               Ljava/lang/String;
+  #18 = Utf8               a
+  #19 = Utf8               Ljava/lang/Integer;
+  #20 = Utf8               b
+  #21 = Utf8               c
+  #22 = Utf8               MethodParameters
+  #23 = Utf8               RuntimeVisibleAnnotations
+  #24 = Utf8               Lorg/springframework/web/bind/annotation/RequestMapping;
+  #25 = Utf8               value
+  #26 = Utf8               /test
+  #27 = Utf8               SourceFile
+  #28 = Utf8               TestController.java
+  #29 = Utf8               Lorg/springframework/web/bind/annotation/RestController;
+  #30 = Utf8               /
+  #31 = NameAndType        #7:#8          // "<init>":()V
+  #32 = Class              #38            // java/lang/Integer
+  #33 = NameAndType        #39:#40        // valueOf:(I)Ljava/lang/Integer;
+  #34 = Utf8               java/lang/Object
+  #35 = NameAndType        #41:#42        // responseSuccess:([Ljava/lang/Object;)Lcom/example/thread_no_known/resp/ResponseResult;
+  #36 = Utf8               com/example/thread_no_known/contoller/TestController
+  #37 = Utf8               com/example/thread_no_known/contoller/BaseController
+  #38 = Utf8               java/lang/Integer
+  #39 = Utf8               valueOf
+  #40 = Utf8               (I)Ljava/lang/Integer;
+  #41 = Utf8               responseSuccess
+  #42 = Utf8               ([Ljava/lang/Object;)Lcom/example/thread_no_known/resp/ResponseResult;
+{
+  public com.example.thread_no_known.contoller.TestController();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method com/example/thread_no_known/contoller/BaseController."<init>":()V
+         4: return
+      LineNumberTable:
+        line 10: 0
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/example/thread_no_known/contoller/TestController;
+
+  public com.example.thread_no_known.resp.ResponseResult test(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lcom/example/thread_no_known/resp/ResponseResult;
+    flags: ACC_PUBLIC
+    Code:
+      stack=5, locals=5, args_size=2
+         0: iconst_1
+         1: invokestatic  #2                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+         4: astore_2
+         5: iconst_2
+         6: invokestatic  #2                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+         9: astore_3
+        10: iconst_3
+        11: invokestatic  #2                  // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        14: astore        4
+        16: aload_0
+        17: iconst_3
+        18: anewarray     #3                  // class java/lang/Object
+        21: dup
+        22: iconst_0
+        23: aload_2
+        24: aastore
+        25: dup
+        26: iconst_1
+        27: aload_3
+        28: aastore
+        29: dup
+        30: iconst_2
+        31: aload         4
+        33: aastore
+        34: invokevirtual #4                  // Method responseSuccess:([Ljava/lang/Object;)Lcom/example/thread_no_known/resp/ResponseResult;
+        37: areturn
+      LineNumberTable:
+        line 14: 0
+        line 15: 5
+        line 16: 10
+        line 18: 16
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      38     0  this   Lcom/example/thread_no_known/contoller/TestController;
+            0      38     1 methodParam   Ljava/lang/String;
+            5      33     2     a   Ljava/lang/Integer;
+           10      28     3     b   Ljava/lang/Integer;
+           16      22     4     c   Ljava/lang/Integer;
+    MethodParameters:
+      Name                           Flags
+      methodParam
+    RuntimeVisibleAnnotations:
+      0: #24(#25=[s#26])
+}
+SourceFile: "TestController.java"
+RuntimeVisibleAnnotations:
+  0: #29()
+  1: #24(#25=[s#30])
+
+Process finished with exit code 0

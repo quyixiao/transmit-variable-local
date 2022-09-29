@@ -1,0 +1,263 @@
+Classfile /Users/quyixiao/github/Thread_NO_Known/target/classes/com/example/thread_no_known/contoller/TestController1.class
+  Last modified 2022-9-27; size 2071 bytes
+  MD5 checksum 387b3756d704ae60e97f7127d15b4a11
+  Compiled from "TestController1.java"
+public class com.example.thread_no_known.contoller.TestController1 extends com.example.thread_no_known.contoller.BaseController
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+   #1 = Methodref          #16.#54        // com/example/thread_no_known/contoller/BaseController."<init>":()V
+   #2 = Methodref          #55.#56        // com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer.enter:()V
+   #3 = String             #35            // methodParam
+   #4 = Methodref          #55.#57        // com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer.addVariable:(Ljava/lang/String;Ljava/lang/Object;)V
+   #5 = String             #28            // a
+   #6 = Methodref          #55.#58        // com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer.addVariable:(Ljava/lang/String;I)V
+   #7 = String             #30            // b
+   #8 = String             #31            // c
+   #9 = Class              #59            // java/lang/Object
+  #10 = Methodref          #60.#61        // java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+  #11 = Methodref          #15.#62        // com/example/thread_no_known/contoller/TestController1.responseSuccess:([Ljava/lang/Object;)Lcom/example/thread_no_known/resp/ResponseResult;
+  #12 = Methodref          #55.#63        // com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer.exit:()V
+  #13 = Class              #64            // java/lang/String
+  #14 = Fieldref           #15.#65        // com/example/thread_no_known/contoller/TestController1.$test1195259493:[Ljava/lang/String;
+  #15 = Class              #66            // com/example/thread_no_known/contoller/TestController1
+  #16 = Class              #67            // com/example/thread_no_known/contoller/BaseController
+  #17 = Utf8               $test1195259493
+  #18 = Utf8               [Ljava/lang/String;
+  #19 = Utf8               <init>
+  #20 = Utf8               ()V
+  #21 = Utf8               Code
+  #22 = Utf8               LineNumberTable
+  #23 = Utf8               LocalVariableTable
+  #24 = Utf8               this
+  #25 = Utf8               Lcom/example/thread_no_known/contoller/TestController1;
+  #26 = Utf8               test
+  #27 = Utf8               (Ljava/lang/String;)Lcom/example/thread_no_known/resp/ResponseResult;
+  #28 = Utf8               a
+  #29 = Utf8               I
+  #30 = Utf8               b
+  #31 = Utf8               c
+  #32 = Utf8               var10000
+  #33 = Utf8               Lcom/example/thread_no_known/resp/ResponseResult;
+  #34 = Utf8               var6
+  #35 = Utf8               methodParam
+  #36 = Utf8               Ljava/lang/String;
+  #37 = Utf8               var9
+  #38 = Utf8               Z
+  #39 = Utf8               StackMapTable
+  #40 = Class              #66            // com/example/thread_no_known/contoller/TestController1
+  #41 = Class              #64            // java/lang/String
+  #42 = Class              #68            // java/lang/Throwable
+  #43 = Class              #69            // com/example/thread_no_known/resp/ResponseResult
+  #44 = Utf8               MethodParameters
+  #45 = Utf8               RuntimeVisibleAnnotations
+  #46 = Utf8               Lorg/springframework/web/bind/annotation/RequestMapping;
+  #47 = Utf8               value
+  #48 = Utf8               /test2
+  #49 = Utf8               <clinit>
+  #50 = Utf8               SourceFile
+  #51 = Utf8               TestController1.java
+  #52 = Utf8               Lorg/springframework/web/bind/annotation/RestController;
+  #53 = Utf8               /
+  #54 = NameAndType        #19:#20        // "<init>":()V
+  #55 = Class              #71            // com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer
+  #56 = NameAndType        #74:#20        // enter:()V
+  #57 = NameAndType        #75:#76        // addVariable:(Ljava/lang/String;Ljava/lang/Object;)V
+  #58 = NameAndType        #75:#77        // addVariable:(Ljava/lang/String;I)V
+  #59 = Utf8               java/lang/Object
+  #60 = Class              #78            // java/lang/Integer
+  #61 = NameAndType        #79:#80        // valueOf:(I)Ljava/lang/Integer;
+  #62 = NameAndType        #81:#82        // responseSuccess:([Ljava/lang/Object;)Lcom/example/thread_no_known/resp/ResponseResult;
+  #63 = NameAndType        #83:#20        // exit:()V
+  #64 = Utf8               java/lang/String
+  #65 = NameAndType        #17:#18        // $test1195259493:[Ljava/lang/String;
+  #66 = Utf8               com/example/thread_no_known/contoller/TestController1
+  #67 = Utf8               com/example/thread_no_known/contoller/BaseController
+  #68 = Utf8               java/lang/Throwable
+  #69 = Utf8               com/example/thread_no_known/resp/ResponseResult
+  #70 = Class              #84            // com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer
+  #71 = Utf8               com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer
+  #72 = Utf8               LocalVariablesNamesTracer
+  #73 = Utf8               InnerClasses
+  #74 = Utf8               enter
+  #75 = Utf8               addVariable
+  #76 = Utf8               (Ljava/lang/String;Ljava/lang/Object;)V
+  #77 = Utf8               (Ljava/lang/String;I)V
+  #78 = Utf8               java/lang/Integer
+  #79 = Utf8               valueOf
+  #80 = Utf8               (I)Ljava/lang/Integer;
+  #81 = Utf8               responseSuccess
+  #82 = Utf8               ([Ljava/lang/Object;)Lcom/example/thread_no_known/resp/ResponseResult;
+  #83 = Utf8               exit
+  #84 = Utf8               com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer
+{
+  public static java.lang.String[] $test1195259493;
+    descriptor: [Ljava/lang/String;
+    flags: ACC_PUBLIC, ACC_STATIC
+
+  public com.example.thread_no_known.contoller.TestController1();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method com/example/thread_no_known/contoller/BaseController."<init>":()V
+         4: return
+      LineNumberTable:
+        line 13: 0
+        line 14: 4
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lcom/example/thread_no_known/contoller/TestController1;
+
+  public com.example.thread_no_known.resp.ResponseResult test(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lcom/example/thread_no_known/resp/ResponseResult;
+    flags: ACC_PUBLIC
+    Code:
+      stack=5, locals=9, args_size=2
+         0: iconst_0
+         1: istore_2
+         2: iconst_1
+         3: istore_2
+         4: invokestatic  #2                  // Method com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer.enter:()V
+         7: ldc           #3                  // String methodParam
+         9: aload_1
+        10: invokestatic  #4                  // Method com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer.addVariable:(Ljava/lang/String;Ljava/lang/Object;)V
+        13: iconst_1
+        14: istore        5
+        16: ldc           #5                  // String a
+        18: iload         5
+        20: invokestatic  #6                  // Method com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer.addVariable:(Ljava/lang/String;I)V
+        23: iconst_2
+        24: istore        6
+        26: ldc           #7                  // String b
+        28: iload         6
+        30: invokestatic  #6                  // Method com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer.addVariable:(Ljava/lang/String;I)V
+        33: iconst_3
+        34: istore        7
+        36: ldc           #8                  // String c
+        38: iload         7
+        40: invokestatic  #6                  // Method com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer.addVariable:(Ljava/lang/String;I)V
+        43: aload_0
+        44: iconst_3
+        45: anewarray     #9                  // class java/lang/Object
+        48: dup
+        49: iconst_0
+        50: iload         5
+        52: invokestatic  #10                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        55: aastore
+        56: dup
+        57: iconst_1
+        58: iload         6
+        60: invokestatic  #10                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        63: aastore
+        64: dup
+        65: iconst_2
+        66: iload         7
+        68: invokestatic  #10                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+        71: aastore
+        72: invokevirtual #11                 // Method responseSuccess:([Ljava/lang/Object;)Lcom/example/thread_no_known/resp/ResponseResult;
+        75: astore_3
+        76: iconst_0
+        77: istore_2
+        78: iload_2
+        79: ifeq          106
+        82: aconst_null
+        83: astore        4
+        85: invokestatic  #12                 // Method com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer.exit:()V
+        88: goto          106
+        91: astore        8
+        93: iload_2
+        94: ifeq          103
+        97: aconst_null
+        98: astore        4
+       100: invokestatic  #12                 // Method com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer.exit:()V
+       103: aload         8
+       105: athrow
+       106: aload_3
+       107: astore        4
+       109: invokestatic  #12                 // Method com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer.exit:()V
+       112: aload         4
+       114: areturn
+      Exception table:
+         from    to  target type
+             2    78    91   any
+            91    93    91   any
+      LineNumberTable:
+        line 18: 0
+        line 23: 2
+        line 24: 4
+        line 25: 7
+        line 26: 13
+        line 27: 16
+        line 28: 23
+        line 29: 26
+        line 30: 33
+        line 31: 36
+        line 32: 43
+        line 33: 76
+        line 35: 78
+        line 36: 82
+        line 37: 85
+        line 35: 91
+        line 36: 97
+        line 37: 100
+        line 39: 103
+        line 41: 106
+        line 42: 109
+        line 43: 112
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+           16      62     5     a   I
+           26      52     6     b   I
+           36      42     7     c   I
+           76      15     3 var10000   Lcom/example/thread_no_known/resp/ResponseResult;
+           85       6     4  var6   Lcom/example/thread_no_known/resp/ResponseResult;
+          100       3     4  var6   Lcom/example/thread_no_known/resp/ResponseResult;
+            0     115     0  this   Lcom/example/thread_no_known/contoller/TestController1;
+            0     115     1 methodParam   Ljava/lang/String;
+            2     113     2  var9   Z
+          106       9     3 var10000   Lcom/example/thread_no_known/resp/ResponseResult;
+          109       6     4  var6   Lcom/example/thread_no_known/resp/ResponseResult;
+      StackMapTable: number_of_entries = 3
+        frame_type = 255 /* full_frame */
+          offset_delta = 91
+          locals = [ class com/example/thread_no_known/contoller/TestController1, class java/lang/String, int ]
+          stack = [ class java/lang/Throwable ]
+        frame_type = 255 /* full_frame */
+          offset_delta = 11
+          locals = [ class com/example/thread_no_known/contoller/TestController1, class java/lang/String, int, top, top, top, top, top, class java/lang/Throwable ]
+          stack = []
+        frame_type = 255 /* full_frame */
+          offset_delta = 2
+          locals = [ class com/example/thread_no_known/contoller/TestController1, class java/lang/String, int, class com/example/thread_no_known/resp/ResponseResult ]
+          stack = []
+    MethodParameters:
+      Name                           Flags
+      methodParam
+    RuntimeVisibleAnnotations:
+      0: #46(#47=[s#48])
+
+  static {};
+    descriptor: ()V
+    flags: ACC_STATIC
+    Code:
+      stack=4, locals=0, args_size=0
+         0: iconst_1
+         1: anewarray     #13                 // class java/lang/String
+         4: dup
+         5: iconst_0
+         6: ldc           #3                  // String methodParam
+         8: aastore
+         9: putstatic     #14                 // Field $test1195259493:[Ljava/lang/String;
+        12: return
+      LineNumberTable:
+        line 11: 0
+}
+SourceFile: "TestController1.java"
+RuntimeVisibleAnnotations:
+  0: #52()
+  1: #46(#47=[s#53])
+InnerClasses:
+     public static #72= #55 of #70; //LocalVariablesNamesTracer=class com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer$LocalVariablesNamesTracer of class com/linzi/classloading/enhancers/LocalvariablesNamesEnhancer
